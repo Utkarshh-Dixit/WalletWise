@@ -1,5 +1,6 @@
 // const express = require('express');
 import express from 'express';
+import cors from 'cors';
 import dotenv from 'dotenv';
 import { initDB } from './config/db.js';
 import rateLimiter from './middleware/rateLimiter.js';
@@ -9,6 +10,14 @@ import job from './config/cron.js';
 dotenv.config();
 
 const app = express();
+
+// CORS configuration
+app.use(cors({
+  origin: true, // Allow all origins for development/mobile apps
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 if(process.env.NODE_ENV === 'production') {
   job.start();

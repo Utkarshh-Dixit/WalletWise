@@ -1,0 +1,30 @@
+{
+  "cli": {
+    "version": ">= 16.17.1",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "env": {
+        "EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY": "pk_test_aW1tdW5lLWxpb25maXNoLTE2LmNsZXJrLmFjY291bnRzLmRldiQ"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "env": {
+        "EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY": "pk_test_aW1tdW5lLWxpb25maXNoLTE2LmNsZXJrLmFjY291bnRzLmRldiQ"
+      }
+    },
+    "production": {
+      "autoIncrement": true,
+      "env": {
+        "EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY": "pk_test_aW1tdW5lLWxpb25maXNoLTE2LmNsZXJrLmFjY291bnRzLmRldiQ"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
